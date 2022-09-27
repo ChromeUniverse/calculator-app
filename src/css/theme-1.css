@@ -1,0 +1,104 @@
+:root {
+  /* Backgrounds */
+  /* (main background) */
+  --very-dark-desaturated-blue-1: hsl(222, 26%, 31%);
+  /* (toggle background, keypad background) */
+  --very-dark-desaturated-blue-2: hsl(223, 31%, 20%);
+  /* (screen background) */
+  --very-dark-desaturated-blue-3: hsl(224, 36%, 15%);
+
+  /* Keys */
+  /* (key background) */
+  --desaturated-dark-blue-1: hsl(225, 21%, 49%);
+  /* (key shadow) */
+  --desaturated-dark-blue-2: hsl(224, 28%, 35%);
+
+  /* (key background, toggle) */
+  --red: hsl(6, 63%, 50%);
+
+  /* (key shadow) */
+  --dark-red: hsl(6, 70%, 34%);
+  /* (key background) */
+  --light-grayish-orange: hsl(30, 25%, 89%);
+  /* (key shadow) */
+  --grayish-orange: hsl(28, 16%, 65%);
+
+  /* Text */
+  --very-dark-grayish-blue: hsl(221, 14%, 31%);
+  --white: hsl(0, 0, 100%);
+}
+
+.theme-1-main {
+  background-color: var(--very-dark-desaturated-blue-1);
+}
+
+.theme-1-header-logo {
+  color: white;
+}
+
+.theme-1-header-switch-prompt {
+  color: white;
+}
+
+.theme-1-header-switch-container {
+  background-color: var(--very-dark-desaturated-blue-2);
+}
+
+.theme-1-header-switch-toggle {
+  background-color: var(--red);
+}
+
+.theme-1-header-switch-position {
+  color: white;
+}
+
+.theme-1-display {
+  background-color: var(--very-dark-desaturated-blue-3);
+}
+
+.theme-1-display-text {
+  color: white;
+}
+
+.theme-1-keypad {
+  background-color: var(--very-dark-desaturated-blue-2);
+}
+
+.theme-1-key {
+  background-color: var(--light-grayish-orange); 
+  box-shadow: 0 5px 0 var(--grayish-orange);
+}
+
+.theme-1-key:hover {
+  background-color: white;
+}
+
+.theme-1-key > .key-text {
+  color: var(--very-dark-grayish-blue);
+}
+
+.theme-1-key-type-1 {
+  background-color: var(--desaturated-dark-blue-1);
+  box-shadow: 0 5px 0 var(--desaturated-dark-blue-2);
+}
+
+.theme-1-key-type-1:hover {
+  background-color: #a2b3e1ff;
+}
+
+.theme-1-key-type-1 > .key-text {
+  color: white;
+}
+
+.theme-1-key-type-2 {
+  background-color: var(--red);
+  box-shadow: 0 5px 0 var(--dark-red);
+}
+
+.theme-1-key-type-2:hover {
+  background-color: #f97363ff;
+}
+
+.theme-1-key-type-2 > .key-text {
+  color: white;
+}

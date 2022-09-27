@@ -1,0 +1,183 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'League Spartan', sans-serif;
+}
+
+.main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calc {
+  width: 540px;
+  height: 715px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  font-size: 33px;
+}
+
+.header-switch {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-switch-prompt {
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+.header-switch-container {
+  box-sizing: content-box;
+  position: relative;
+  width: 72px;
+  height: 26px;
+  border-radius: 10000px;
+}
+
+.header-switch-slider {
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  top: 5px;
+}
+
+.header-switch-toggle {
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.header-switch-toggle:hover {
+  filter: brightness(150%);
+}
+
+.ghost {
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.ghost-1 {
+  left: 5px;
+}
+
+.ghost-2 {
+  left: 28px;
+}
+
+.ghost-3 {
+  right: 5px;
+}
+
+.header-switch-positions {
+  position: absolute;
+  top: -20px;
+  left: 10px;
+  width: 54px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.display, .keypad {
+  border-radius: 10px;
+}
+
+.display {
+  height: 128px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.display-text {
+  padding-right: 31px;
+  font-size: 52px;
+}
+
+.keypad {  
+  width: 100%;
+  padding: 31px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 24px;
+  grid-template-areas: 
+  ". . . . "
+  ". . . . "
+  ". . . . "
+  ". . . . "
+  "reset reset equals equals";
+}
+
+.key {
+  width: auto;
+  height: 60px; 
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 7px;
+  justify-content: center;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.key-text {
+  font-size: 40px;
+}
+
+.key-type-1, .key-type-2 {
+  padding-bottom: 12px;
+}
+
+.key-type-1 > .key-text, .key-type-2 > .key-text {
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+.key-area-reset {
+  grid-area: reset;
+}
+
+.key-area-equals {
+  grid-area: equals;
+}
+
+@media (max-width: 560px) {
+
+  .calc {
+    width: 90vw;
+  }
+
+  .keypad {
+    gap: 15px;
+  } 
+
+  .key {
+    height: 70px;
+    padding-bottom: 11px;
+  }
+
+  .key-type-1 > .key-text, .key-type-2 > .key-text {
+    font-size: 22px;
+    padding-bottom: 11px;
+  }
+
+}

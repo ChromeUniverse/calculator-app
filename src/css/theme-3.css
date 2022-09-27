@@ -1,0 +1,102 @@
+:root {
+  /* Backgrounds */
+  
+  /* (main background) */
+  --very-dark-violet-1: hsl(268, 75%, 9%);
+  /* (toggle background, keypad background, screen background) */
+  --very-dark-violet-2: hsl(268, 71%, 12%);
+
+  /* Keys */
+  /* (key background) */
+  --dark-violet: hsl(281, 89%, 26%);
+  /* (key shadow) */
+  --vivid-magenta: hsl(285, 91%, 52%);
+  /* (key background, toggle) */
+  --pure-cyan: hsl(176, 100%, 44%);
+  /* (key shadow) */
+  --soft-cyan: hsl(177, 92%, 70%);
+  /* (key background): */
+  --very-dark-violet-3: hsl(268, 47%, 21%);
+  /* (key shadow) */
+  --dark-magenta: hsl(290, 70%, 36%);
+
+  /* Text */
+  --light-yellow: hsl(52, 100%, 62%);
+  --very-dark-blue: hsl(198, 20%, 13%);
+  --white: hsl(0, 0, 100%);
+}
+
+.theme-3-main {
+  background-color: var(--very-dark-violet-1);
+}
+
+.theme-3-header-logo {
+  color: var(--light-yellow);
+}
+
+.theme-3-header-switch-prompt {
+  color: var(--light-yellow);
+}
+
+.theme-3-header-switch-container {
+  background-color: var(--very-dark-violet-2);
+}
+
+.theme-3-header-switch-toggle {
+  background-color: var(--pure-cyan);
+}
+
+.theme-3-header-switch-position {
+  color: var(--light-yellow);
+}
+
+.theme-3-display {
+  background-color: var(--very-dark-violet-2);
+}
+
+.theme-3-display-text {
+  color: var(--light-yellow);
+}
+
+.theme-3-keypad {
+  background-color: var(--very-dark-violet-2);
+}
+
+.theme-3-key {
+  background-color: var(--very-dark-violet-3);
+  box-shadow: 0 5px 0 var(--dark-magenta);
+}
+
+.theme-3-key:hover {
+  background-color: #6b34acff;
+}
+
+.theme-3-key > .key-text {
+  color: var(--light-yellow);
+}
+
+.theme-3-key-type-1 {
+  background-color: var(--dark-violet);
+  box-shadow: 0 5px 0 var(--vivid-magenta);
+}
+
+.theme-3-key-type-1:hover {
+  background-color: #8631b0ff;
+}
+
+.theme-3-key-type-1 > .key-text {
+  color: white;
+}
+
+.theme-3-key-type-2 {
+  background-color: var(--pure-cyan);
+  box-shadow: 0 5px 0 var(--soft-cyan);
+}
+
+.theme-3-key-type-2:hover {
+  background-color: #94fff9ff;
+}
+
+.theme-3-key-type-2 > .key-text {
+  color: var(--very-dark-blue);
+}

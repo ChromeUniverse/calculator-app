@@ -1,0 +1,104 @@
+:root {
+  /* Backgrounds */
+
+  /* (main background) */
+  --light-gray: hsl(0, 0%, 90%);
+  /* (toggle background, keypad background): */
+  --grayish-red: hsl(0, 5%, 81%);
+  /* (screen background) */
+  --very-light-gray: hsl(0, 0%, 93%);
+
+  /* Keys */
+  
+  /* (key background) */
+  --dark-moderate-cyan: hsl(185, 42%, 37%);
+  /* (key shadow) */
+  --very-dark-cyan: hsl(185, 58%, 25%);
+  /* (key background, toggle) */
+  --orange: hsl(25, 98%, 40%);
+  /* (key shadow) */
+  --dark-orange: hsl(25, 99%, 27%);
+  /* (key background) */
+  --light-grayish-yellow: hsl(45, 7%, 89%);
+  /* (key shadow) */
+  --dark-grayish-orange: hsl(35, 11%, 61%);
+
+  /* Text */
+  --very-dark-grayish-yellow: hsl(60, 10%, 19%);
+  --white: hsl(0, 0, 100%);
+}
+
+.theme-2-main {
+  background-color: var(--light-gray);
+}
+
+.theme-2-header-logo {
+  color: var(--very-dark-grayish-yellow);
+}
+
+.theme-2-header-switch-prompt {
+  color: var(--very-dark-grayish-yellow);
+}
+
+.theme-2-header-switch-container {
+  background-color: var(--grayish-red);
+}
+
+.theme-2-header-switch-toggle {
+  background-color: var(--orange);
+}
+
+.theme-2-header-switch-position {
+  color: var(--very-dark-grayish-yellow);
+}
+
+.theme-2-display {
+  background-color: var(--very-light-gray);
+}
+
+.theme-2-display-text {
+  color: var(--very-dark-grayish-yellow)
+}
+
+.theme-2-keypad {
+  background-color: var(--grayish-red);
+}
+
+.theme-2-key {
+  background-color: var(--light-grayish-yellow); 
+  box-shadow: 0 5px 0 var(--dark-grayish-orange);
+}
+
+.theme-2-key:hover {
+  background-color: white;
+}
+
+.theme-2-key > .key-text {
+  color: var(--very-dark-grayish-blue);
+}
+
+.theme-2-key-type-1 {
+  background-color: var(--dark-moderate-cyan);
+  box-shadow: 0 5px 0 var(--very-dark-cyan);
+}
+
+.theme-2-key-type-1:hover {
+  background-color: #62b5bdff;
+}
+
+.theme-2-key-type-1 > .key-text {
+  color: white;
+}
+
+.theme-2-key-type-2 {
+  background-color: var(--orange);
+  box-shadow: 0 5px 0 var(--dark-orange);
+}
+
+.theme-2-key-type-2:hover {
+  background-color: #ff8b38ff;
+}
+
+.theme-2-key-type-2 > .key-text {
+  color: white;
+}
