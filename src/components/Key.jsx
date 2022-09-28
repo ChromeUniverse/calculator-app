@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "../App";
 
-function Key({ text, type = 0, area = "" }) {
+function Key({ text, type = 0, area = "", onClick }) {
 
   const theme = useContext(ThemeContext);
 
@@ -13,6 +13,7 @@ function Key({ text, type = 0, area = "" }) {
         ${type === 2 ? `key-type-2 theme-${theme}-key-type-2` : ""}
         ${area !== "" ? `key-area-${area}` : ""}
       `}
+      onClick={onClick}
     >
       <p className="key-text">{text}</p>
     </div>
