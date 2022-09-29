@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { ThemeContext } from "../App";
 import Key from "./Key";
 
-function Keypad({ addChar, delChar, reset, handleOperator, calc }) {
+function Keypad({ addChar, delChar, reset, handleOperator, handleEquals }) {
 
   const theme = useContext(ThemeContext);
 
@@ -25,7 +25,7 @@ function Keypad({ addChar, delChar, reset, handleOperator, calc }) {
       <Key text="/" onClick={() => handleOperator(3)}/>
       <Key text="x" onClick={() => handleOperator(2)}/>
       <Key text="reset" type={1} area="reset" onClick={() => reset()}/>
-      <Key text="=" type={2} area="equals" onClick={() => calc()}/>
+      <Key text="=" type={2} area="equals" onClick={() => handleEquals()}/>
     </div>
   );
 }
