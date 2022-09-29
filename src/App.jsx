@@ -105,7 +105,7 @@ function App() {
     const newSecondary = (previous === '=') ? '' : secondary;
     setSecondary(newSecondary);
 
-    if (newSecondary !== '') calc(true, false);
+    if (newSecondary !== '' && !previous.includes('op')) calc(true, false);
 
     setOperator(op);
     setHold(true);
