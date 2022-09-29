@@ -37,7 +37,7 @@ function App() {
   }, [])
 
   // run calculation
-  function calc(shift = true) {
+  function calc(shift = true, swap) {
     let result;
     let originalPrimary = primary;
     const primaryNumber = Number(primary);
@@ -50,23 +50,23 @@ function App() {
     // 2     -> x
     // 3     -> /
 
-    if (shift) {
-      // console.log(shift);
-      // if (operator === 0) result =  primaryNumber + secondaryNumber;
-      // if (operator === 1) result =  primaryNumber - secondaryNumber;
-      // if (operator === 2) result =  primaryNumber * secondaryNumber;
-      // if (operator === 3) result =  primaryNumber / secondaryNumber;
+    if (swap) {
+      console.log('got here!');
+      if (operator === 0) result =  primaryNumber + secondaryNumber;
+      if (operator === 1) result =  primaryNumber - secondaryNumber;
+      if (operator === 2) result =  primaryNumber * secondaryNumber;
+      if (operator === 3) result =  primaryNumber / secondaryNumber;
     } else {
-      // if (operator === 0) result =  secondaryNumber + primaryNumber;
-      // if (operator === 1) result =  secondaryNumber - primaryNumber;
-      // if (operator === 2) result =  secondaryNumber * primaryNumber;
-      // if (operator === 3) result =  secondaryNumber / primaryNumber;
+      if (operator === 0) result =  secondaryNumber + primaryNumber;
+      if (operator === 1) result =  secondaryNumber - primaryNumber;
+      if (operator === 2) result =  secondaryNumber * primaryNumber;
+      if (operator === 3) result =  secondaryNumber / primaryNumber;
     }
 
-    if (operator === 0) result =  secondaryNumber + primaryNumber;
-    if (operator === 1) result =  secondaryNumber - primaryNumber;
-    if (operator === 2) result =  secondaryNumber * primaryNumber;
-    if (operator === 3) result =  secondaryNumber / primaryNumber;
+    // if (operator === 0) result =  secondaryNumber + primaryNumber;
+    // if (operator === 1) result =  secondaryNumber - primaryNumber;
+    // if (operator === 2) result =  secondaryNumber * primaryNumber;
+    // if (operator === 3) result =  secondaryNumber / primaryNumber;
     
 
     console.log('Result is:', result);
@@ -105,7 +105,7 @@ function App() {
     const newSecondary = (previous === '=') ? '' : secondary;
     setSecondary(newSecondary);
 
-    if (newSecondary !== '') calc();
+    if (newSecondary !== '') calc(true, false);
 
     setOperator(op);
     setHold(true);
@@ -116,7 +116,7 @@ function App() {
   // "equals" click handler
   function handleEquals() {
     const shift = (previous === '=');
-    calc(shift)
+    calc(shift, shift)
     setPrevious('=');
   }
 
